@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Echo</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+</head>
+
+<body>
+    <form action="http://127.0.0.1:5000/api/v1.0/echo" method="get" target="responseFrame">
+        <label for="msg">Enter message and click on "Echo" to get it back from the Server.</label>
+        <br/>
+        <input type="text" name="msg">
+        <input type="submit" value="Echo">
+    </form>
+    <iframe name="responseFrame" frameborder="0"></iframe> 
+</body>
+
+</html>
