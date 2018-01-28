@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Echo</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+</head>
+
+<body>
+    <form action="http://127.0.0.1:5000">
+        <label for="term">Enter message and click on "Echo" to get it back from the Server.</label>
+        <br/>
+        <input type="text" name="term">
+        <input type="submit" value="Echo" id="msg" onclick="getMsg()">
+    </form>
+    <p id="output"></p>
+    <script type="text/javascript">
+    function getMsg() {
+        data = $('#msg').val();
+        $.ajax({
+            url: "http://127.0.0.1:5000/api/v1.0/echo/" + data,
+            success: function() {
+                return $('#output') = JSON.stringify(data)
+            }
+        });
+    }
+    </script>
+</body>
+
+</html>
